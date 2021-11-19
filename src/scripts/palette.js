@@ -1,3 +1,5 @@
+console.log("OK");
+
 let val = document.querySelector('input[type="color"]');
     let val2 = document.querySelector('input[type="text"]');
     let bg = document.querySelector('.container');

@@ -1,0 +1,19 @@
+{
+  "name": "tatools",
+  "version": "1.0.0",
+  "description": "Simple devtools kit",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JustGritt/Tatol-palette.git"
+  },
+  "author": "Alexis TAN",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JustGritt/Tatol-palette/issues"
+  },
+  "homepage": "https://github.com/JustGritt/Tatol-palette#readme"
+}

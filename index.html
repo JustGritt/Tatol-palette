@@ -4,13 +4,60 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/dist/css/nav.css">
+    <link rel="stylesheet" href="/dist/css/main.css">
+    <link rel="stylesheet" href="/dist/css/cursor.css">
     <title>Color picker</title>
 </head>
 <body>
-    <div class="container">
+    <!-- NAVIGATION  -->
+    <nav id="nav" class="is-flex">
+        <div class="logo is-flex">
+            <img src="/src/assets/logo.png" alt="Notre meilleur logo">
+            <a href="#">Poyo'Polette</a>
+        </div>
+
+        <div class="navigation is-flex">
+            <ul>
+                <li><a href="#">Palette</a></li>
+                <li><a href="#">Gradient</a></li>
+                <li><a href="#">3-Colors Gradient</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Infos</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- FIRST SECTION  -->
+    <section class="section landing is-flex">
         <input type="text" name="text" placeholder="#000000">
         <input type="color" name="color" id="color">
+    </section>
+    
+    <!-- SECOND SECTION  -->
+    <section class="section palettes">
+        
+    </section>
+
+    <!-- THIRD SECTION  -->
+    <section class="section more">
+        
+    </section>
+
+    <!-- FOURTH SECTION  -->
+    <section class="section contact">
+        
+    </section>
+
+    <!-- CURSOR  -->
+    <div id="cursor" class="cursor-container">
+        <div class="cursor-dot"></div>
+        <div class="cursor-circle"></div>
     </div>
 </body>
+
+<!-- SCRIPTS -->
+<script src="src/scripts/palette.js"></script>
+<script src="src/scripts/mouse.js"></script>
+
 </html>

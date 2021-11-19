@@ -1,0 +1,37 @@
+/* IMPORTS
+======================= */
+
+@use './nav.scss';
+
+@use './mixins/colors' as c;
+@use './mixins/global' as g;
+@use './mixins/fonts' as f;
+
+/* CLASSES MAIN
+======================= */
+
+section.landing {
+
+    background: linear-gradient(to right top, #53f5f5, #40eafc, #3ddeff, #4ad1ff, #5fc4fe, #6fbafb, #81aef5, #91a3ec, #a198e3, #b18cd7, #be80c7, #c974b5);
+    background-size: 100%;
+
+    height: 100vh;
+    flex-direction: column;
+    overflow: hidden;
+    
+    input {
+        width: 200px;
+    }
+}
+
+section.palettes {
+    background: c.$vert;
+}
+
+section.more {
+    background: c.$rose;
+}
+
+section.contact {
+    background: c.$bleu;
+}
