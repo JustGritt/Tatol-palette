@@ -1,0 +1,104 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    font-family: 'Poppins', sans-serif;
+    background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#root {
+    width: 100vw;
+    height: 100vh;
+
+    section.hero {
+        height: 90%;
+        text-align: center;
+        margin: 0 160px;
+    
+        h1, h2 {
+            font-weight: 700;
+            margin: 0;
+            margin-top: 1rem;
+            color: #fff;
+        }
+
+        h1 { font-size: clamp(2.5rem, 4vw, 4.5rem); }
+        h2 { font-size: clamp(1.5rem, 2vw, 2.5rem); }
+    
+        input[type="color"] {
+            margin: 2rem auto;
+            width: 100%;
+            height: 50px;
+            max-width: 360px;
+            border: 4px solid #fff;
+            outline: none;
+            border-radius: 32px;
+            background: #fff;
+            padding: 15px 30px;
+            &::-webkit-color-swatch {
+                display: none;
+                border-color: transparent;
+                height: 0;
+                opacity: 0;
+            }
+            &::-moz-color-swatch {
+                display: none;
+                border-color: transparent;
+                height: 0;
+                opacity: 0;
+            }
+        }
+            
+        button {
+            width: 100%;
+            max-width: 360px;
+            height: 50px;
+            outline: none;
+            padding: 15px 30px;
+            background: #10ac84;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 32px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            transition: all 0.2s ease-in-out;
+            &:hover {
+                font-size: 1.25rem;
+            }
+        }
+
+    }
+
+    section.palette {
+        height: auto;
+        .colors-container {
+            height: 100vh;
+            flex-direction: row;
+            justify-content: flex-start;
+            .color-box {
+                height: 100%;
+                color: #fff;
+                justify-content: flex-start;
+                label {
+                    position: sticky;
+                    margin-top: 25px;
+                    top: 50%;
+                    padding: 10px;
+                    border-radius: 8px;
+                    background: rgba(0, 0, 0, .5);
+                }
+            }
+        }
+
+    }
+}
