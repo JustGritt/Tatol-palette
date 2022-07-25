@@ -39,7 +39,7 @@ function App() {
 	}
 
 	function updateColor(e) {
-		hexRef.current.value = e.target.value;
+		document.getElementById('selectedValue').innerHTML = hexRef.current.value = e.target.value;
 		e.target.style.backgroundColor = e.target.value;
 	}
 
@@ -49,8 +49,11 @@ function App() {
 				<h1>Tired of wasting time deciding on the right color to choose?</h1>
 				<h2>Just choose a color you like!</h2>
 				
-				<input type="color" ref={hexRef} onChange={updateColor} />
-				<button onClick={addColor} class="flex">Validate Color</button>
+				<div className="color-selector">
+					<input type="color" ref={hexRef} onChange={updateColor} htmlFor="color" />
+					<label htmlFor="color" id="selectedValue"></label>
+				</div>
+				<button onClick={addColor} className="flex">Select Color</button>
 			</section>
 
 			<section className="palette">
