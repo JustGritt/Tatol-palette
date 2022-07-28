@@ -17,9 +17,30 @@ html, body {
     width: 100vw;
     height: 100vh;
 
+    button {
+        width: 100%;
+        max-width: 360px;
+        height: 50px;
+        outline: none;
+        padding: 15px 30px;
+        background: #10ac84;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        border-radius: 32px;
+        font-size: 1.2rem;
+        font-weight: bold;
+        letter-spacing: 1.2px;
+        text-transform: uppercase;
+        transition: all 0.2s ease-in-out;
+        &:hover {
+            font-size: 1.25rem;
+        }
+    }
+
     section.hero {
         position: relative;
-        height: 90%;
+        height: 100%;
         text-align: center;
         margin: 0 160px;
     
@@ -77,41 +98,54 @@ html, body {
                 }
             }
         }
-
-            
-        button {
-            width: 100%;
-            max-width: 360px;
-            height: 50px;
-            outline: none;
-            padding: 15px 30px;
-            background: #10ac84;
-            color: #fff;
-            border: none;
-            cursor: pointer;
-            border-radius: 32px;
-            font-size: 1.2rem;
-            font-weight: bold;
-            letter-spacing: 1.2px;
-            text-transform: uppercase;
-            transition: all 0.2s ease-in-out;
-            &:hover {
-                font-size: 1.25rem;
-            }
-        }
-
     }
 
     section.palette {
-        height: auto;
+        position: fixed;
+        bottom: 0;
+        height: 0;
+        width: 100%;
+        background: #fff;
+        transition: all .2s ease-in-out;
+
+        .palette-actions {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 80px;
+            width: 100%;
+
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+            button {
+                background: transparent;
+                border: 1px solid #000;
+                color: #000;
+                &:hover {
+                    background: #10ac84;
+                    border: 1px solid #10ac84;
+                    color: #fff;
+                }
+                &:nth-child(2):hover {
+                    background: #eb4d4b;
+                    border: 1px solid #eb4d4b;
+                    color: #fff;
+                }
+            }
+        }
+
         .colors-container {
-            height: 100vh;
+            height:  100vh;
+            width: 100%;
             flex-direction: row;
             justify-content: flex-start;
             .color-box {
                 height: 100%;
                 color: #fff;
                 justify-content: flex-start;
+                transition: all .4s ease-in-out;
                 label {
                     position: sticky;
                     margin-top: 25px;
@@ -123,5 +157,10 @@ html, body {
             }
         }
 
+        &.open {
+            height: 100vh !important;
+        }
+    
     }
+
 }

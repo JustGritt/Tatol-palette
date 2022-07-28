@@ -1,12 +1,19 @@
 import React from 'react'
 
 function copyColor(e) {
-    // console.log(e.target.children[0].innerText);
-    console.log(e);
+    console.log(e.target.classList.contains('color-box'))
+    
+    if(e.target.classList.contains('color-box')) {
+        const currentcolor = e.target.firstChild.innerText;
+        console.log('Copied', currentcolor);
+    } else if(e.target.tagName === 'LABEL') {
+        const currentcolor = e.target.innerText;
+        console.log('Copied', currentcolor); 
+    }
+}
 
-    e.target.tagName === "LABEL" ? navigator.clipboard.writeText(e.target.innerText) : navigator.clipboard.writeText(e.target.children[0].innerText)
-
-    // navigator.clipboard.writeText(e.target.children[0].innerText);
+function removeColor(e) {
+    console.log(e)
 }
 
 export default function Color({ color }) {
@@ -15,6 +22,9 @@ export default function Color({ color }) {
             <label> 
                 {color.hex.toUpperCase()}
             </label>
+            <span className="remove" onClick={removeColor}>
+                X
+            </span>
         </div>
     )
 }
