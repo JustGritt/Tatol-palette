@@ -1,5 +1,6 @@
 import React from 'react'
 import removeIcon from './removeItem.svg';
+import { uuidv4 } from 'uuid';
 
 function copyColor(e) {
     console.log(e.target.classList.contains('color-box'))
@@ -14,7 +15,7 @@ function copyColor(e) {
 }
 
 function removeColor(e) {
-    console.log(e)
+    console.log(e.target.parentElement.innerText);
 }
 
 export default function Color({ color }) {

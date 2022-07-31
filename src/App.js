@@ -46,8 +46,11 @@ function App() {
 		e.target.style.backgroundColor = e.target.value;
 	}
 
-	function openPalette() {
-		paletteRef.current.classList.toggle('open');
+	function openPalette(e) {
+		if(e.target.classList.contains('color-box')) {
+			paletteRef.current.classList.toggle('open')
+		}
+		return;
 	}
 
 	return ( 
@@ -65,7 +68,7 @@ function App() {
 
 			<section id="palette-content" className="palette" onClick={openPalette} ref={paletteRef}>
 				<div className="colors-container flex">
-					<ColorPicker colors={colors} />
+					<ColorPicker colors={colors}/>
 				</div>
 			</section>
 		</>
