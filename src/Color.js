@@ -1,4 +1,5 @@
 import React from 'react'
+import removeIcon from './removeItem.svg';
 
 function copyColor(e) {
     console.log(e.target.classList.contains('color-box'))
@@ -21,10 +22,10 @@ export default function Color({ color }) {
         <div id={color.id} className="color-box flex" style={{ backgroundColor: color.hex }} onClick={copyColor} >
             <label> 
                 {color.hex.toUpperCase()}
+                <span className="remove" onClick={removeColor}>
+                    <img src={removeIcon} alt="remove item" />
+                </span>
             </label>
-            <span className="remove" onClick={removeColor}>
-                X
-            </span>
         </div>
     )
 }

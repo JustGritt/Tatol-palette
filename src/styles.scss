@@ -161,6 +161,27 @@ html, body {
             height: 100vh !important;
         }
     
+        .remove {
+            position: relative;
+            top: -2px;
+            background: #000;
+            margin: 0;
+            display: inline-flex;
+            padding: 6px;
+            margin-left: 8px;
+            border-radius: 100%;
+            transition: all .2s ease-in-out;
+            border: 2px solid #000;
+            cursor: pointer;
+            &:hover {
+                border: 2px solid #fff;
+            }
+            img {
+                width: 8px;
+                height: 8px;
+            }
+        }
+
     }
 
 }
